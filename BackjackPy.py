@@ -64,7 +64,6 @@ class blackjackGame():
                 print(*cls.dealer._dealer_hand[0:game_round] + ["X"], sep = ", ")
             elif game_round > len(cls.dealer._dealer_hand):
                 print(*cls.dealer._dealer_hand[0:-1] + ["X"], sep = ", ")
-        # print(f"{cls.dealer._dealer_points} points")
         
         print("\nPlayer's hand")
         print("-------------")
@@ -86,7 +85,6 @@ class blackjackGame():
             cls.dealer._dealer_hand.append(dealer_card)
             cls.dealer._dealer_points += dealer_points
         time.sleep(3)
-        # print(cls.dealer._dealer_hand)
         
         print("\nDrawing player's cards...")
         for i in range(2):
@@ -94,8 +92,6 @@ class blackjackGame():
             cls.player._player_hand.append(player_card)
             cls.player._player_points += player_points
         time.sleep(3)
-
-        # cls._display_hands_points(1)
     
     def game_hit(cls, who_hits : str):
         card, points = pullCard()
